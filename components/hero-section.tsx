@@ -93,20 +93,21 @@ export function HeroSection() {
                             initial="hidden"
                             animate="visible"
                             custom={0}
-                            className="inline-flex items-center gap-2 bg-[#121212] text-white px-3 py-1.5 rounded-full text-xs font-mono tracking-wider"
+                            className="inline-flex items-center gap-2 bg-[#1D6E58] text-white px-3 py-1.5 rounded-full text-xs font-mono tracking-wider"
                         >
                             <motion.span
-                                className="w-2 h-2 bg-[#AFFF00] rounded-full"
+                                className="w-2 h-2 bg-[#FDD62B] rounded-full"
                                 animate={{ scale: [1, 1.2, 1], opacity: [1, 0.7, 1] }}
                                 transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
                             />
-                            BETTER-FOR-YOU ENERGY DRINK
+                            Giải Cầu Lông FPT Mở Rộng
                         </motion.div>
+
 
                         <div className="space-y-1 overflow-hidden">
                             <motion.h1
                                 style={{ x: textX1 }}
-                                className="text-5xl md:text-7xl font-black tracking-tighter text-[#121212] leading-[0.9]"
+                                className="text-4xl md:text-6xl font-black tracking-tighter text-[#1D6E58] leading-[0.9]"
                             >
                                 <motion.span
                                     variants={fadeUpVariants}
@@ -115,21 +116,21 @@ export function HeroSection() {
                                     custom={1}
                                     className="inline-block"
                                 >
-                                    FUEL YOUR
+                                    FPTU OPEN 2026
                                 </motion.span>
                             </motion.h1>
                             <motion.h1
                                 style={{ x: textX2 }}
-                                className="text-5xl md:text-7xl font-black tracking-tighter text-[#121212] leading-[0.9]"
+                                className="text-4xl md:text-6xl font-black tracking-tighter text-[#FDD62B] leading-[0.9] mt-5"
                             >
                                 <motion.span
                                     variants={fadeUpVariants}
                                     initial="hidden"
                                     animate="visible"
                                     custom={2}
-                                    className="inline-block text-[#AFFF00]"
+                                    className="inline-block text-[#FDD62B]"
                                 >
-                                    AMBITION
+                                    LÂN THẦN HỘ MỆNH
                                 </motion.span>
                             </motion.h1>
                             <motion.p
@@ -139,7 +140,7 @@ export function HeroSection() {
                                 custom={3}
                                 className="text-lg md:text-xl font-mono text-[#121212]/60 tracking-tight pt-2 max-w-md"
                             >
-                                Zero sugar. Natural flavors. Clean energy that hits different.
+                                Vượt giới hạn - Chạm đam mê
                             </motion.p>
                         </div>
 
@@ -151,7 +152,7 @@ export function HeroSection() {
                             className="flex flex-wrap gap-3 pt-2"
                         >
                             <motion.button
-                                className="bg-[#AFFF00] text-[#121212] px-6 py-3 rounded-full font-bold text-sm tracking-wide flex items-center gap-2 group relative overflow-hidden"
+                                className="bg-[#FDD62B] text-[#121212] px-6 py-3 rounded-full font-bold text-sm tracking-wide flex items-center gap-2 group relative overflow-hidden"
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
                                 transition={{ type: "spring" as const, stiffness: 400, damping: 17 }}
@@ -161,7 +162,7 @@ export function HeroSection() {
                                     whileHover={{ x: "200%" }}
                                     transition={{ duration: 0.6 }}
                                 />
-                                <span className="relative z-10">Sign Up & Save 25%</span>
+                                <span className="relative z-10">Địa điểm:   Đại học FPT Hà Nội</span>
                                 <motion.svg
                                     className="w-4 h-4 relative z-10"
                                     fill="none"
@@ -174,14 +175,14 @@ export function HeroSection() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </motion.svg>
                             </motion.button>
-                            <motion.button
+                            {/* <motion.button
                                 className="border-2 border-[#121212] text-[#121212] px-6 py-3 rounded-full font-bold text-sm tracking-wide relative overflow-hidden"
                                 whileHover={{ scale: 1.02, backgroundColor: "#121212", color: "#fff" }}
                                 whileTap={{ scale: 0.98 }}
                                 transition={{ type: "spring" as const, stiffness: 400, damping: 17 }}
                             >
                                 Explore Flavours
-                            </motion.button>
+                            </motion.button> */}
                         </motion.div>
 
                         <motion.div
@@ -191,7 +192,7 @@ export function HeroSection() {
                             custom={5}
                             className="flex flex-wrap gap-4 pt-2"
                         >
-                            {["Zero Sugar", "75mg Caffeine", "Natural Flavours", "Vitamin B Rich"].map((benefit, i) => (
+                            {["Kết nối", "Đam mê", "Năng động", "Bức phá"].map((benefit, i) => (
                                 <motion.div
                                     key={benefit}
                                     className="flex items-center gap-2 text-xs font-mono text-[#121212]/60"
@@ -199,7 +200,7 @@ export function HeroSection() {
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: 0.8 + i * 0.1 }}
                                 >
-                                    <div className="w-1.5 h-1.5 bg-[#AFFF00] rounded-full" />
+                                    <div className="w-1.5 h-1.5 bg-[#FDD62B] rounded-full" />
                                     {benefit}
                                 </motion.div>
                             ))}
@@ -209,7 +210,7 @@ export function HeroSection() {
                     <motion.div style={{ y, scale }} className="relative flex justify-center">
                         <motion.div variants={scaleInVariants} initial="hidden" animate="visible" className="relative">
                             <motion.div
-                                className="absolute inset-0 bg-[#84cc16]/30 blur-[80px] rounded-full scale-75"
+                                className="absolute inset-0 bg-[#FDD62B]/30 blur-[80px] rounded-full scale-75"
                                 animate={{
                                     scale: [0.75, 0.85, 0.75],
                                     opacity: [0.3, 0.5, 0.3],
@@ -229,11 +230,11 @@ export function HeroSection() {
                                 }}
                             >
                                 <Image
-                                    src="/images/drink2.png"
-                                    alt="GiGi Energy Drink - Lemon Lime Flavour"
-                                    width={350}
-                                    height={525}
-                                    className="relative z-10 drop-shadow-2xl"
+                                    src="/images/imagebanner.png"
+                                    alt="FPTU 20 OPEN 26 Banner"
+                                    width={1000}
+                                    height={600}
+                                    className="relative z-10 drop-shadow-2xl rounded-2xl object-cover"
                                     priority
                                 />
                             </motion.div>
@@ -241,7 +242,7 @@ export function HeroSection() {
                     </motion.div>
                 </div>
 
-                <motion.div
+                {/* <motion.div
                     className="absolute bottom-6 left-1/2 -translate-x-1/2"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -259,7 +260,7 @@ export function HeroSection() {
                             />
                         </div>
                     </motion.div>
-                </motion.div>
+                </motion.div> */}
             </div>
         </section>
     )

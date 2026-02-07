@@ -32,8 +32,8 @@ const flavors = [
         tagline: "Coming Soon",
         description: "Something epic is brewing... Stay tuned.",
         image: "/mystery-energy-drink-can-silhouette.jpg",
-        bgColor: "from-[#AFFF00]/20 via-[#AFFF00]/5 to-transparent",
-        accentColor: "#AFFF00",
+        bgColor: "from-[#FDD62B]/20 via-[#FDD62B]/5 to-transparent",
+        accentColor: "#FDD62B",
         mystery: true,
     },
 ]
@@ -102,9 +102,14 @@ export function FlavorCarousel() {
     const prevFlavor = () => paginate(-1)
 
     return (
-        <section id="flavours" className="relative py-16 bg-white overflow-hidden">
+        <section id="flavours" className="relative pt-24 pb-16 bg-[#B8E5DE] overflow-hidden">
+            {/* Dreamy Background Mix */}
+            <div className="absolute inset-0 bg-gradient-to-b from-white via-[#B8E5DE] to-white opacity-70" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,rgba(255,255,255,1)_0%,transparent_70%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(255,255,255,1)_0%,transparent_70%)]" />
+
             <motion.div
-                className={`absolute inset-0 bg-gradient-to-br ${currentFlavor.bgColor}`}
+                className={`absolute inset-0 bg-gradient-to-br ${currentFlavor.bgColor} mix-blend-overlay`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" as const }}
@@ -126,7 +131,7 @@ export function FlavorCarousel() {
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
                     >
-                        OUR FLAVOURS
+                        Giới thiệu
                     </motion.span>
                     <h2 className="text-3xl md:text-5xl font-black text-[#121212] tracking-tighter mt-2 overflow-hidden">
                         <motion.span
@@ -289,7 +294,7 @@ export function FlavorCarousel() {
                                                     transition={{ delay: 0.5 }}
                                                 >
                                                     <motion.div
-                                                        className="w-2 h-2 bg-[#AFFF00] rounded-full"
+                                                        className="w-2 h-2 bg-[#FDD62B] rounded-full"
                                                         animate={{ scale: [1, 1.3, 1], opacity: [1, 0.5, 1] }}
                                                         transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
                                                     />

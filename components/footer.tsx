@@ -43,20 +43,20 @@ export function Footer() {
 
     const footerLinks = [
         {
-            title: "Products",
-            links: ["Lemon Lime", "Pineapple Coconut", "Mystery", "Bundles"],
+            title: "Giải Đấu",
+            links: ["Cầu Đơn", "Cầu Đôi", "Lịch Thi Đấu", "Bảng Xếp Hạng"],
         },
         {
-            title: "Quick Links",
-            links: ["Home", "Flavours", "Creators", "Distributors"],
+            title: "Sự Kiện",
+            links: ["Lễ Khai Mạc", "Vòng Bán Kết", "Vòng Chung Kết", "Gala Trao Giải"],
         },
         {
-            title: "Company",
-            links: ["About", "Careers", "Press", "Contact"],
+            title: "Tổ Chức",
+            links: ["Giới Thiệu", "Ban Tổ Chức", "Nhà Tài Trợ", "Liên Hệ"],
         },
         {
-            title: "Legal",
-            links: ["Privacy Policy", "Terms of Service", "Cookie Policy"],
+            title: "Liên Hệ",
+            links: ["SĐT:0987654321", "Email: [EMAIL_ADDRESS]", "Địa Chỉ: Hà Nội"],
         },
     ]
 
@@ -78,7 +78,7 @@ export function Footer() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] as const }}
                         >
-                            READY TO
+                            SẴN SÀNG
                         </motion.span>
                         <motion.span
                             className="block text-[#AFFF00]"
@@ -87,7 +87,7 @@ export function Footer() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] as const, delay: 0.1 }}
                         >
-                            LEVEL UP?
+                            TỎA SÁNG?
                         </motion.span>
                     </h2>
                 </motion.div>
@@ -105,17 +105,17 @@ export function Footer() {
                                 type="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                placeholder="your@email.com"
-                                className="w-full bg-white/5 border-2 border-white/20 rounded-xl px-4 py-3 text-white placeholder:text-white/40 font-mono text-sm focus:outline-none focus:border-[#AFFF00] transition-all duration-300"
-                                whileFocus={{ borderColor: "#AFFF00" }}
+                                placeholder="Email của bạn..."
+                                className="w-full bg-white/5 border-2 border-white/20 rounded-xl px-4 py-3 text-white placeholder:text-white/40 font-mono text-sm focus:outline-none focus:border-[#FDD62B] transition-all duration-300"
+                                whileFocus={{ borderColor: "#FDD62B" }}
                             />
                             <motion.div
                                 className="absolute inset-0 rounded-xl pointer-events-none"
-                                animate={email.length > 0 ? { boxShadow: "0 0 20px rgba(175,255,0,0.2)" } : { boxShadow: "none" }}
+                                animate={email.length > 0 ? { boxShadow: "0 0 20px rgba(253,214,43,0.2)" } : { boxShadow: "none" }}
                             />
                         </motion.div>
                         <motion.button
-                            className="bg-[#AFFF00] text-[#121212] px-6 py-3 rounded-xl font-bold text-sm tracking-wide whitespace-nowrap relative overflow-hidden"
+                            className="bg-[#FDD62B] text-[#121212] px-6 py-3 rounded-xl font-bold text-sm tracking-wide whitespace-nowrap relative overflow-hidden"
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
                             transition={{ type: "spring" as const, stiffness: 400, damping: 17 }}
@@ -133,7 +133,7 @@ export function Footer() {
                                 animate={isSubmitting ? { opacity: [1, 0.5, 1] } : {}}
                                 transition={{ duration: 0.5, repeat: isSubmitting ? Number.POSITIVE_INFINITY : 0 }}
                             >
-                                {isSubmitting ? "Joining..." : "Get 25% Off"}
+                                {isSubmitting ? "Đang gửi..." : "Tham gia ngay"}
                             </motion.span>
                         </motion.button>
                     </div>
@@ -144,7 +144,7 @@ export function Footer() {
                         viewport={{ once: true }}
                         transition={{ delay: 0.4 }}
                     >
-                        Join 50k+ dreamers. No spam, just energy.
+                        Hơn 1000+ lông thủ đã đăng ký. Chỉ có niềm vui và đam mê.
                     </motion.p>
                 </motion.div>
 
@@ -156,8 +156,8 @@ export function Footer() {
                     transition={{ delay: 0.3 }}
                 >
                     <p className="text-white/60 font-mono text-xs max-w-xl mx-auto leading-relaxed">
-                        GiGi Energy is a better-for-you energy drink crafted with natural flavors, zero sugar, and a clean energy
-                        formula. Fuel your ambition without the crash.
+                        FPTU Open 2026 là giải đấu cầu lông quy mô lớn, nơi hội tụ những tài năng trẻ và lan tỏa tinh thần thể thao
+                        năng động. Hãy cùng chúng tôi bứt phá giới hạn bản thân.
                     </p>
                 </motion.div>
 
@@ -202,13 +202,19 @@ export function Footer() {
                         transition={{ type: "spring" as const, stiffness: 400, damping: 17 }}
                     >
 
-                        <span className="text-xl font-black">
-                            <span className="text-white">Gi</span>
-                            <span className="text-[#AFFF00]">Gi</span>
-                        </span>
+                        <div className="flex flex-col leading-[0.75] italic font-black uppercase tracking-tighter">
+                            <span className="text-lg bg-gradient-to-b from-[#F9E43C] via-[#FFF9C4] to-[#F9E43C] bg-clip-text text-transparent drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] px-1">
+                                FPTU 20
+                            </span>
+                            <span className="text-lg bg-gradient-to-b from-[#F9E43C] via-[#FFF9C4] to-[#F9E43C] bg-clip-text text-transparent drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] px-1">
+                                OPEN 26
+                            </span>
+                        </div>
+
                     </motion.div>
 
-                    <p className="text-white/40 font-mono text-xs">© 2026 GiGi Energy. All rights reserved.</p>
+
+                    <p className="text-white/40 font-mono text-xs">© 2026 FPTU Open. Mọi quyền được bảo lưu.</p>
 
                     <motion.p
                         className="text-white/30 font-mono text-xs cursor-pointer"
@@ -219,7 +225,7 @@ export function Footer() {
                                 ? {
                                     rotate: [0, -5, 5, -5, 5, 0],
                                     scale: [1, 1.1, 1],
-                                    color: "#AFFF00",
+                                    color: "#FDD62B",
                                 }
                                 : {
                                     rotate: 0,
@@ -229,19 +235,23 @@ export function Footer() {
                         }
                         transition={{ duration: 0.5 }}
                     >
-                        made with energy
+                        lan tỏa đam mê
                     </motion.p>
                 </motion.div>
             </div>
 
             <motion.div
-                className="absolute bottom-0 left-1/2 -translate-x-1/2 text-[15rem] md:text-[30rem] font-black text-white/[0.02] pointer-events-none select-none leading-none"
-                initial={{ y: 100, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
+                className="w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[8rem] md:text-[18rem] font-black text-white/[0.02] pointer-events-none select-none z-0"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 1, ease: "easeOut" as const }}
+                transition={{ duration: 1.2, ease: "easeOut" as const }}
             >
-                GiGi
+                <div className="italic text-center leading-[1] tracking-tighter">
+                    <span>FPTU 20
+                        <br />
+                        OPEN 26</span>
+                </div>
             </motion.div>
         </footer>
     )

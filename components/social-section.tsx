@@ -2,7 +2,7 @@
 
 import { motion, useInView, type Variants } from "framer-motion"
 import { useRef } from "react"
-import { Instagram } from "lucide-react"
+import { Facebook } from "lucide-react"
 import Image from "next/image"
 
 const instagramPosts = [
@@ -44,90 +44,89 @@ export function SocialSection() {
     const isInView = useInView(ref, { once: true, margin: "-50px" })
 
     return (
-        <section id="creators" className="relative py-16 bg-[#121212] overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6">
+        <section id="creators" className="relative py-24 overflow-hidden bg-white">
+            {/* Background elements to create the "pha màu" effect with a grid */}
+            <div className="absolute inset-0 z-0 opacity-40">
+                <div
+                    className="absolute inset-0"
+                    style={{
+                        backgroundImage: `linear-gradient(#1D6E58 1px, transparent 1px), linear-gradient(90deg, #1D6E58 1px, transparent 1px)`,
+                        backgroundSize: '40px 40px',
+                        opacity: 0.1
+                    }}
+                />
+                <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-orange-200/50 rounded-full blur-[120px]" />
+                <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] bg-teal-200/50 rounded-full blur-[120px]" />
+            </div>
+
+            <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] as const }}
-                    className="text-center mb-10"
+                    transition={{ duration: 0.8 }}
+                    className="text-center mb-16"
                 >
-                    <motion.span
-                        className="font-mono text-[#AFFF00] text-xs tracking-widest inline-block"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
-                    >
-                        FOLLOW THE ENERGY
-                    </motion.span>
-                    <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter mt-2 overflow-hidden">
-                        <motion.span
-                            className="inline-block"
-                            initial={{ y: 100 }}
-                            whileInView={{ y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] as const, delay: 0.2 }}
-                        >
-                            @GIGIENERGY
-                        </motion.span>
-                        <motion.span
-                            className="text-[#AFFF00] inline-block"
-                            initial={{ y: 100 }}
-                            whileInView={{ y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] as const, delay: 0.3 }}
-                        >
-                            .IN
-                        </motion.span>
+                    <h2 className="text-3xl md:text-6xl font-black uppercase tracking-[-0.07em] leading-[0.85] inline-flex flex-col md:flex-row items-center justify-center gap-x-6">
+                        <span className="text-[#106B52]">Đại Sứ</span>
+                        <span className="text-[#FFD700]">Thương Hiệu</span>
                     </h2>
+                    <motion.p
+                        className="mt-8 text-[#106B52] font-mono font-bold tracking-[0.3em] text-sm md:text-base opacity-40 uppercase"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 0.4 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.5 }}
+                    >
+                        KẾT NỐI ĐAM MÊ • BỨT PHÁ GIỚI HẠN
+                    </motion.p>
                 </motion.div>
 
-                <motion.div
-                    ref={ref}
-                    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3"
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate={isInView ? "visible" : "hidden"}
-                >
-                    {instagramPosts.map((post, index) => (
-                        <motion.div
-                            key={index}
-                            variants={itemVariants}
-                            whileHover={{
-                                scale: 1.05,
-                                zIndex: 10,
-                                transition: { type: "spring" as const, stiffness: 300, damping: 20 },
-                            }}
-                            className="relative aspect-square rounded-xl overflow-hidden group cursor-pointer"
-                        >
-                            <Image
-                                src={post.image || "/placeholder.svg"}
-                                alt={`Instagram post ${index + 1}`}
-                                fill
-                                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                            />
+                <div className="relative w-full overflow-hidden py-10">
+                    <motion.div
+                        className="flex gap-4 w-max"
+                        animate={{
+                            x: ["-50%", "0%"]
+                        }}
+                        transition={{
+                            duration: 30,
+                            repeat: Infinity,
+                            ease: "linear"
+                        }}
+                    >
+                        {/* Duplicate the list to create a seamless loop */}
+                        {[...instagramPosts, ...instagramPosts].map((post, index) => (
                             <motion.div
-                                className="absolute inset-0 bg-[#AFFF00]/0 group-hover:bg-[#AFFF00]/20 flex items-center justify-center"
-                                initial={{ opacity: 0 }}
-                                whileHover={{ opacity: 1 }}
-                                transition={{ duration: 0.3 }}
+                                key={index}
+                                whileHover={{
+                                    scale: 1.05,
+                                    zIndex: 10,
+                                    transition: { type: "spring", stiffness: 300, damping: 20 },
+                                }}
+                                className="relative w-64 aspect-square rounded-2xl overflow-hidden group cursor-pointer flex-shrink-0 shadow-lg border border-white/20"
                             >
+                                <Image
+                                    src={post.image || "/placeholder.svg"}
+                                    alt={`Instagram post ${index + 1}`}
+                                    fill
+                                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#1D6E58]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                 <motion.div
-                                    className="flex items-center gap-1 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                                    initial={{ y: 10 }}
-                                    whileHover={{ y: 0 }}
+                                    className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100"
+                                    transition={{ duration: 0.3 }}
                                 >
-                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                                    </svg>
-                                    <span className="font-mono text-xs">{post.likes}</span>
+                                    <div className="flex items-center gap-2 bg-white/20 backdrop-blur-md px-4 py-2 rounded-full border border-white/30 text-white">
+                                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                        </svg>
+                                        <span className="font-bold text-sm tracking-tighter">{post.likes}</span>
+                                    </div>
                                 </motion.div>
                             </motion.div>
-                        </motion.div>
-                    ))}
-                </motion.div>
+                        ))}
+                    </motion.div>
+                </div>
 
                 <motion.div
                     className="flex justify-center mt-8"
@@ -137,21 +136,23 @@ export function SocialSection() {
                     transition={{ delay: 0.5 }}
                 >
                     <motion.a
-                        href="https://instagram.com/gigienergy.in"
+                        href="https://www.facebook.com/FPTUbadminton"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 bg-[#AFFF00] text-[#121212] px-6 py-3 rounded-full font-bold text-sm tracking-wide relative overflow-hidden group"
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                        transition={{ type: "spring" as const, stiffness: 400, damping: 17 }}
+                        className="flex items-center gap-3 bg-[#FDD62B] text-[#1D6E58] px-8 py-4 rounded-full font-black text-sm tracking-[0.1em] relative overflow-hidden group shadow-lg"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 17 }}
                     >
                         <motion.div
-                            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full"
+                            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full"
                             whileHover={{ x: "200%" }}
                             transition={{ duration: 0.6 }}
                         />
-                        <Instagram className="w-4 h-4 relative z-10" />
-                        <span className="relative z-10">Follow @gigienergy.in</span>
+                        <div className="p-2 border border-[#1D6E58] rounded-md bg-[#1D6E58]/5 relative z-10">
+                            <Facebook className="w-4 h-4" />
+                        </div>
+                        <span className="relative z-10">FOLLOW FPTU OPEN 2026</span>
                     </motion.a>
                 </motion.div>
             </div>

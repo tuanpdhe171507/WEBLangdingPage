@@ -30,11 +30,11 @@ export function Navigation() {
     }
 
     const navLinks = [
-        { label: "Home", href: "#hero" },
-        { label: "Flavours", href: "#flavours" },
-        { label: "Creators", href: "#creators" },
-        { label: "Distributors", href: "#distributors" },
-        { label: "Careers", href: "#careers" },
+        { label: "Trang chủ", href: "#hero" },
+        { label: "Giới thiệu", href: "#introduction" },
+        { label: "Lịch trình", href: "#schedule" },
+        { label: "Giải thưởng", href: "#prizes" },
+        { label: "Đối Tác", href: "#sponsors" },
     ]
 
     return (
@@ -42,29 +42,39 @@ export function Navigation() {
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ type: "spring" as const, stiffness: 100, damping: 20 }}
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-[#121212]/95 backdrop-blur-md border-b border-white/10" : "bg-transparent"
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-[#1D6E58]/95 backdrop-blur-md border-b border-white/10" : "bg-transparent"
                 }`}
         >
             <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
                 <Link href="/" className="flex items-center gap-2">
-                    <motion.span
-                        className="text-2xl font-black tracking-tighter"
+                    <motion.div
+                        className="flex flex-col leading-[0.75] italic font-black uppercase tracking-tighter"
                         whileHover={{ scale: 1.05 }}
                         transition={{ type: "spring" as const, stiffness: 400, damping: 17 }}
                     >
-                        <span className={scrolled ? "text-white" : "text-[#121212]"}>Gi</span>
                         <motion.span
-                            className="text-[#AFFF00]"
+                            className="text-xl md:text-2xl bg-gradient-to-b from-[#F9E43C] via-[#FFF9C4] to-[#F9E43C] bg-clip-text text-transparent drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] px-1"
                             animate={{
-                                textShadow: scrolled
-                                    ? ["0 0 10px rgba(175,255,0,0.5)", "0 0 20px rgba(175,255,0,0.8)", "0 0 10px rgba(175,255,0,0.5)"]
-                                    : "none",
+                                filter: scrolled
+                                    ? ["drop-shadow(0 2px 4px rgba(0,0,0,0.5)) brightness(1)", "drop-shadow(0 2px 10px rgba(249,228,60,0.5)) brightness(1.1)", "drop-shadow(0 2px 4px rgba(0,0,0,0.5)) brightness(1)"]
+                                    : "drop-shadow(0 2px 4px rgba(0,0,0,0.5))",
                             }}
                             transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
                         >
-                            Gi
+                            FPTU 20
                         </motion.span>
-                    </motion.span>
+                        <motion.span
+                            className="text-xl md:text-2xl bg-gradient-to-b from-[#F9E43C] via-[#FFF9C4] to-[#F9E43C] bg-clip-text text-transparent drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] px-1"
+                            animate={{
+                                filter: scrolled
+                                    ? ["drop-shadow(0 2px 4px rgba(0,0,0,0.5)) brightness(1)", "drop-shadow(0 2px 10px rgba(249,228,60,0.5)) brightness(1.1)", "drop-shadow(0 2px 4px rgba(0,0,0,0.5)) brightness(1)"]
+                                    : "drop-shadow(0 2px 4px rgba(0,0,0,0.5))",
+                            }}
+                            transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
+                        >
+                            OPEN 26
+                        </motion.span>
+                    </motion.div>
                 </Link>
 
                 <div className="hidden md:flex items-center gap-8">
@@ -72,7 +82,7 @@ export function Navigation() {
                         <motion.button
                             key={item.label}
                             onClick={() => scrollToSection(item.href)}
-                            className={`text-sm font-medium tracking-wide transition-colors relative ${scrolled ? "text-white/80 hover:text-[#AFFF00]" : "text-[#121212]/80 hover:text-[#121212]"
+                            className={`text-sm font-medium tracking-wide transition-colors relative ${scrolled ? "text-white/80 hover:text-[#FDD62B]" : "text-[#121212]/80 hover:text-[#121212]"
                                 }`}
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -82,7 +92,7 @@ export function Navigation() {
                         >
                             {item.label}
                             <motion.span
-                                className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#AFFF00] origin-left"
+                                className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#FDD62B] origin-left"
                                 initial={{ scaleX: 0 }}
                                 whileHover={{ scaleX: 1 }}
                                 transition={{ duration: 0.3, ease: [0.25, 0.4, 0.25, 1] as const }}
@@ -92,7 +102,7 @@ export function Navigation() {
                 </div>
 
                 <motion.button
-                    className="hidden md:block bg-[#AFFF00] text-[#121212] px-6 py-2.5 rounded-full font-bold text-sm tracking-wide relative overflow-hidden"
+                    className="hidden md:block bg-[#FDD62B] text-[#121212] px-6 py-2.5 rounded-full font-bold text-sm tracking-wide relative overflow-hidden"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     transition={{ type: "spring" as const, stiffness: 400, damping: 17 }}
@@ -101,9 +111,9 @@ export function Navigation() {
                         className="absolute inset-0 bg-white/30"
                         animate={{
                             boxShadow: [
-                                "0 0 20px rgba(175,255,0,0.3)",
-                                "0 0 40px rgba(175,255,0,0.6)",
-                                "0 0 20px rgba(175,255,0,0.3)",
+                                "0 0 20px rgba(253,214,43,0.3)",
+                                "0 0 40px rgba(253,214,43,0.6)",
+                                "0 0 20px rgba(253,214,43,0.3)",
                             ],
                         }}
                         transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
@@ -113,7 +123,7 @@ export function Navigation() {
                         animate={{ x: ["-100%", "200%"] }}
                         transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, repeatDelay: 3 }}
                     />
-                    <span className="relative z-10">Get 25% Off</span>
+                    <span className="relative z-10">Tham gia ngay</span>
                 </motion.button>
 
                 <motion.button
@@ -154,14 +164,14 @@ export function Navigation() {
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3, ease: [0.25, 0.4, 0.25, 1] as const }}
-                        className="md:hidden bg-[#121212]/95 backdrop-blur-md border-t border-white/10 overflow-hidden"
+                        className="md:hidden bg-[#1D6E58]/95 backdrop-blur-md border-t border-white/10 overflow-hidden"
                     >
                         <div className="px-6 py-4 space-y-4">
                             {navLinks.map((item, i) => (
                                 <motion.button
                                     key={item.label}
                                     onClick={() => scrollToSection(item.href)}
-                                    className="block w-full text-left text-white/80 hover:text-[#AFFF00] text-lg font-medium py-2"
+                                    className="block w-full text-left text-white/80 hover:text-[#FDD62B] text-lg font-medium py-2"
                                     initial={{ opacity: 0, x: -20 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: i * 0.1 }}
@@ -170,12 +180,12 @@ export function Navigation() {
                                 </motion.button>
                             ))}
                             <motion.button
-                                className="w-full bg-[#AFFF00] text-[#121212] px-6 py-3 rounded-full font-bold text-sm tracking-wide mt-4"
+                                className="w-full bg-[#FDD62B] text-[#121212] px-6 py-3 rounded-full font-bold text-sm tracking-wide mt-4"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.3 }}
                             >
-                                Get 25% Off
+                                Tham gia ngay
                             </motion.button>
                         </div>
                     </motion.div>
