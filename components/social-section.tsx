@@ -44,7 +44,7 @@ export function SocialSection() {
     const isInView = useInView(ref, { once: true, margin: "-50px" })
 
     return (
-        <section id="creators" className="relative py-24 overflow-hidden bg-white">
+        <section id="creators" className="relative py-16 overflow-hidden bg-white">
             {/* Background elements to create the "pha màu" effect with a grid */}
             <div className="absolute inset-0 z-0 opacity-40">
                 <div
@@ -59,7 +59,7 @@ export function SocialSection() {
                 <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] bg-teal-200/50 rounded-full blur-[120px]" />
             </div>
 
-            <div className="max-w-7xl mx-auto px-6 relative z-10">
+            <div className="max-w-6xl mx-auto px-6 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -67,7 +67,7 @@ export function SocialSection() {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-6xl font-black uppercase tracking-[-0.07em] leading-[0.85] inline-flex flex-col md:flex-row items-center justify-center gap-x-6">
+                    <h2 className="text-2xl md:text-4xl font-black uppercase tracking-[-0.07em] leading-[0.85] inline-flex flex-col md:flex-row items-center justify-center gap-x-6">
                         <span className="text-[#106B52]">Đại Sứ</span>
                         <span className="text-[#FFD700]">Thương Hiệu</span>
                     </h2>
@@ -103,7 +103,7 @@ export function SocialSection() {
                                     zIndex: 10,
                                     transition: { type: "spring", stiffness: 300, damping: 20 },
                                 }}
-                                className="relative w-64 aspect-square rounded-2xl overflow-hidden group cursor-pointer flex-shrink-0 shadow-lg border border-white/20"
+                                className="relative w-56 aspect-square rounded-2xl overflow-hidden group cursor-pointer flex-shrink-0 shadow-lg border border-white/20"
                             >
                                 <Image
                                     src={post.image || "/placeholder.svg"}
@@ -139,7 +139,7 @@ export function SocialSection() {
                         href="https://www.facebook.com/FPTUbadminton"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 bg-[#FDD62B] text-[#1D6E58] px-8 py-4 rounded-full font-black text-sm tracking-[0.1em] relative overflow-hidden group shadow-lg"
+                        className="flex items-center gap-3 bg-[#FDD62B] text-[#1D6E58] px-6 py-3 rounded-full font-black text-xs tracking-[0.1em] relative overflow-hidden group shadow-lg"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         transition={{ type: "spring", stiffness: 400, damping: 17 }}

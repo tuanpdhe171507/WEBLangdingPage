@@ -64,8 +64,8 @@ export function LifestyleSection() {
     const isCardsInView = useInView(cardsRef, { once: true, margin: "-50px" })
 
     return (
-        <section className="relative py-32 bg-[#121212] overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6">
+        <section className="relative py-16 bg-[#121212] overflow-hidden">
+            <div className="max-w-6xl mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -82,7 +82,7 @@ export function LifestyleSection() {
                     >
                         COMMUNITY
                     </motion.span>
-                    <h2 className="text-4xl md:text-7xl font-black text-white tracking-tighter mt-4 overflow-hidden">
+                    <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter mt-4 overflow-hidden">
                         <motion.span
                             className="inline-block"
                             initial={{ y: 100 }}
@@ -160,7 +160,7 @@ export function LifestyleSection() {
                                 scale: 1.02,
                                 transition: { type: "spring" as const, stiffness: 400, damping: 17 },
                             }}
-                            className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 cursor-pointer"
+                            className="bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10 cursor-pointer"
                         >
                             <div className="flex items-center gap-3 mb-4">
                                 <motion.div

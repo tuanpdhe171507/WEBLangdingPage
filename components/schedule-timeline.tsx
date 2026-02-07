@@ -105,7 +105,7 @@ export function ScheduleTimeline() {
     const [activeDay, setActiveDay] = useState(0)
 
     return (
-        <section id="schedule" className="relative py-24 bg-[#F0FDF4] overflow-hidden min-h-screen flex flex-col justify-center">
+        <section id="schedule" className="relative py-16 bg-[#F0FDF4] overflow-hidden min-h-screen flex flex-col justify-center">
             {/* Tech Grid Overlay */}
             <div className="absolute inset-0 bg-[linear-gradient(rgba(29,110,88,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(29,110,88,0.03)_1px,transparent_1px)] bg-[size:40px_40px]" />
 
@@ -113,7 +113,7 @@ export function ScheduleTimeline() {
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#1D6E58]/5 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#FDD62B]/10 rounded-full blur-[120px] pointer-events-none" />
 
-            <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
+            <div className="max-w-6xl mx-auto px-6 relative z-10 w-full">
                 {/* Header */}
                 <div className="text-center mb-16">
                     <motion.div
@@ -131,7 +131,7 @@ export function ScheduleTimeline() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-5xl font-black text-[#1D6E58] tracking-tight mb-4"
+                        className="text-3xl md:text-4xl font-black text-[#1D6E58] tracking-tight mb-4"
                     >
                         LỊCH TRÌNH <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FDD62B] to-[#eab308]">THI ĐẤU</span>
                     </motion.h2>
@@ -145,7 +145,7 @@ export function ScheduleTimeline() {
                                 key={index}
                                 onClick={() => setActiveDay(index)}
                                 className={`
-                                    relative px-8 py-4 rounded-2xl font-bold text-sm tracking-wide transition-all duration-300 min-w-[160px] group
+                                    relative px-6 py-3 rounded-2xl font-bold text-xs tracking-wide transition-all duration-300 min-w-[140px] group
                                     ${activeDay === index ? 'text-white shadow-xl scale-105' : 'text-[#1D6E58]/60 hover:text-[#1D6E58] bg-white/50 hover:bg-white'}
                                 `}
                             >
@@ -190,7 +190,7 @@ export function ScheduleTimeline() {
                                         <session.icon className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <h3 className="text-2xl font-black text-[#1D6E58]">{session.name}</h3>
+                                        <h3 className="text-xl font-black text-[#1D6E58]">{session.name}</h3>
                                         <div className="h-1 w-20 bg-gradient-to-r from-[#FDD62B] to-transparent rounded-full mt-1" />
                                     </div>
                                 </div>

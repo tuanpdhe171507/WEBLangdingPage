@@ -5,13 +5,13 @@ import Image from "next/image"
 
 export function EventIntroduction() {
     return (
-        <section id="introduction" className="relative pt-24 pb-24 bg-[#B8E5DE] overflow-hidden">
+        <section id="introduction" className="relative pt-16 pb-16 bg-[#B8E5DE] overflow-hidden">
             {/* Dreamy Background Mix */}
             <div className="absolute inset-0 bg-gradient-to-b from-white via-[#B8E5DE] to-white opacity-70" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,rgba(255,255,255,1)_0%,transparent_70%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(255,255,255,1)_0%,transparent_70%)]" />
 
-            <div className="relative z-10 max-w-7xl mx-auto px-6">
+            <div className="relative z-10 max-w-6xl mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -22,12 +22,12 @@ export function EventIntroduction() {
                     <span className="font-mono text-[#121212]/60 text-xs tracking-widest uppercase">
                         Thông tin sự kiện
                     </span>
-                    <h2 className="text-2xl md:text-4xl font-black text-[#1D6E58] tracking-tighter mt-2">
+                    <h2 className="text-xl md:text-3xl font-black text-[#1D6E58] tracking-tighter mt-2">
                         KHÁM PHÁ <span className="text-[#FDD62B] drop-shadow-sm">FPTU 20</span>
                     </h2>
                 </motion.div>
 
-                <div className="space-y-24 md:space-y-40">
+                <div className="space-y-16 md:space-y-24">
                     {/* Row 1: Image Left, Text Right */}
                     <div className="grid md:grid-cols-2 gap-12 md:gap-24 items-center">
                         <motion.div
@@ -52,10 +52,14 @@ export function EventIntroduction() {
                             className="space-y-6"
                         >
                             <h3 className="text-3xl md:text-5xl font-black text-[#1D6E58] leading-none">
-                                GIỚI THIỆU <br /> GIẢI ĐẤU
+                                GIỚI THIỆU
+                                <span className="block mt-5">
+                                    GIẢI ĐẤU
+                                </span>
                             </h3>
+
                             <p className="text-lg text-[#121212]/80 leading-relaxed font-medium">
-                                FPTU 20 OPEN 26 là đấu trường rực lửa dành cho những tài năng trẻ. Một sự kiện bùng nổ với quy mô hoành tráng, nơi đam mê và kỹ năng hội tụ để tạo nên những khoảnh khắc lịch sử.
+                                FPTU OPEN 2026 là đấu trường rực lửa dành cho những tài năng trẻ. Một sự kiện bùng nổ với quy mô hoành tráng, nơi đam mê và kỹ năng hội tụ để tạo nên những khoảnh khắc lịch sử.
                             </p>
                             <div className="flex gap-4">
                                 <div className="h-1 w-20 bg-[#FDD62B] rounded-full" />
@@ -73,8 +77,12 @@ export function EventIntroduction() {
                             className="order-2 md:order-1 space-y-6"
                         >
                             <h3 className="text-3xl md:text-5xl font-black text-[#1D6E58] leading-none">
-                                MỤC ĐÍCH <br /> TỔ CHỨC
+                                MỤC ĐÍCH
+                                <span className="block mt-5">
+                                    TỔ CHỨC
+                                </span>
                             </h3>
+
                             <p className="text-lg text-[#121212]/80 leading-relaxed font-medium">
                                 FPTU OPEN 2026 là giải cầu lông sinh viên mở rộng diễn ra ngày 07–08/03/2026 tại Đại học FPT Hà Nội dành cho học sinh – sinh viên ≤25 tuổi trên toàn quốc                            </p>
                             <div className="flex gap-4">

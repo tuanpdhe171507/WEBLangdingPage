@@ -61,8 +61,8 @@ export function Footer() {
     ]
 
     return (
-        <footer ref={footerRef} id="careers" className="relative bg-[#121212] pt-16 pb-6 overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6">
+        <footer ref={footerRef} id="careers" className="relative bg-[#121212] pt-12 pb-4 overflow-hidden">
+            <div className="max-w-6xl mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 60 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ export function Footer() {
                     transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] as const }}
                     className="text-center mb-12"
                 >
-                    <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter leading-[0.9] overflow-hidden">
+                    <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter leading-[0.9] overflow-hidden">
                         <motion.span
                             className="block"
                             initial={{ y: 100 }}
@@ -106,7 +106,7 @@ export function Footer() {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 placeholder="Email của bạn..."
-                                className="w-full bg-white/5 border-2 border-white/20 rounded-xl px-4 py-3 text-white placeholder:text-white/40 font-mono text-sm focus:outline-none focus:border-[#FDD62B] transition-all duration-300"
+                                className="w-full bg-white/5 border-2 border-white/20 rounded-xl px-4 py-2 text-white placeholder:text-white/40 font-mono text-xs focus:outline-none focus:border-[#FDD62B] transition-all duration-300"
                                 whileFocus={{ borderColor: "#FDD62B" }}
                             />
                             <motion.div
@@ -115,7 +115,7 @@ export function Footer() {
                             />
                         </motion.div>
                         <motion.button
-                            className="bg-[#FDD62B] text-[#121212] px-6 py-3 rounded-xl font-bold text-sm tracking-wide whitespace-nowrap relative overflow-hidden"
+                            className="bg-[#FDD62B] text-[#121212] px-5 py-2 rounded-xl font-bold text-xs tracking-wide whitespace-nowrap relative overflow-hidden"
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
                             transition={{ type: "spring" as const, stiffness: 400, damping: 17 }}

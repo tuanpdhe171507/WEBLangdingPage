@@ -48,7 +48,7 @@ const sponsors = [
 
 export function SponsorsSection() {
     return (
-        <section id="sponsors" className="relative py-32 bg-[#F0FDF9] overflow-hidden perspective-2000">
+        <section id="sponsors" className="relative py-20 bg-[#F0FDF9] overflow-hidden perspective-2000">
             {/* Soft Brand Background */}
             <div className="absolute inset-0 bg-[#F0FDF9]">
                 {/* Brand Green Radial */}
@@ -59,17 +59,17 @@ export function SponsorsSection() {
                 <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#FDD62B]/10 rounded-full blur-[120px]" />
             </div>
 
-            <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col items-center">
+            <div className="max-w-6xl mx-auto px-6 relative z-10 flex flex-col items-center">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center mb-24"
+                    className="text-center mb-16"
                 >
                     <span className="text-[#1D6E58] font-mono tracking-[0.2em] text-sm uppercase mb-4 block glow-text">
                         Đơn Vị Đồng Hành
                     </span>
-                    <h2 className="text-4xl md:text-6xl font-black text-[#1D6E58] tracking-tighter uppercase">
+                    <h2 className="text-3xl md:text-5xl font-black text-[#1D6E58] tracking-tighter uppercase">
                         NHÀ TÀI TRỢ
                     </h2>
                 </motion.div>
@@ -88,7 +88,7 @@ function RotatingSponsors() {
     // Number of cards
     const N = sponsors.length;
     // Radius of the carousel
-    const radius = 500;
+    const radius = 400;
 
     // Animation Controls
     const rotation = useMotionValue(0);
@@ -131,7 +131,7 @@ function RotatingSponsors() {
                     return (
                         <div
                             key={i}
-                            className="absolute top-1/2 left-1/2 w-[260px] h-[340px] -ml-[130px] -mt-[170px]"
+                            className="absolute top-1/2 left-1/2 w-[220px] h-[300px] -ml-[110px] -mt-[150px]"
                             style={{
                                 transform: `rotateY(${angle}deg) translateZ(${radius}px)`
                             }}
@@ -174,7 +174,7 @@ function RotatingSponsors() {
 
                                         {/* Text Info */}
                                         <div className="relative z-10 text-center px-4">
-                                            <h3 className="text-xl font-black text-[#1D6E58] uppercase tracking-wide leading-tight mb-3">
+                                            <h3 className="text-lg font-black text-[#1D6E58] uppercase tracking-wide leading-tight mb-3">
                                                 {sponsor.name}
                                             </h3>
 

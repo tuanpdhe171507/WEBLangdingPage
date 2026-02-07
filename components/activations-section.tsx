@@ -219,7 +219,7 @@ export function ActivationsSection() {
     }, [isInView])
 
     return (
-        <section id="prizes" className="relative py-24 bg-white overflow-hidden">
+        <section id="prizes" className="relative py-16 bg-white overflow-hidden">
             {/* Tech Grid Background */}
             <div className="absolute inset-0 bg-[linear-gradient(rgba(29,110,88,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(29,110,88,0.03)_1px,transparent_1px)] bg-[size:40px_40px]" />
 
@@ -230,7 +230,7 @@ export function ActivationsSection() {
                 transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
             />
 
-            <div className="max-w-7xl mx-auto px-6 relative z-10">
+            <div className="max-w-6xl mx-auto px-6 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -246,7 +246,7 @@ export function ActivationsSection() {
                         <span>Cơ cấu giải thưởng</span>
                     </motion.div>
 
-                    <h2 className="text-4xl md:text-6xl font-black text-[#1D6E58] tracking-tighter mt-2 mb-4">
+                    <h2 className="text-3xl md:text-5xl font-black text-[#1D6E58] tracking-tighter mt-2 mb-4">
                         CHINH PHỤC <span className="text-[#FDD62B]">ĐỈNH CAO</span>
                     </h2>
                     <motion.p
@@ -276,7 +276,7 @@ export function ActivationsSection() {
                                 scale: 1.03,
                                 transition: { type: "spring", stiffness: 300, damping: 20 },
                             }}
-                            className={`group relative rounded-[2rem] p-6 lg:p-8 cursor-pointer overflow-hidden backdrop-blur-sm bg-white border border-[#1D6E58]/10 shadow-xl hover:${prize.shadow} transition-shadow duration-500 flex flex-col items-center text-center h-full`}
+                            className={`group relative rounded-[1.5rem] p-5 lg:p-6 cursor-pointer overflow-hidden backdrop-blur-sm bg-white border border-[#1D6E58]/10 shadow-xl hover:${prize.shadow} transition-shadow duration-500 flex flex-col items-center text-center h-full`}
                         >
                             {/* Card Gradient Border/Glow on Hover */}
                             <motion.div
@@ -287,7 +287,7 @@ export function ActivationsSection() {
                             {/* Icon / Medal Render */}
                             <motion.div
                                 className={`
-                                    w-28 h-28 flex items-center justify-center mb-6 transform group-hover:rotate-6 transition-transform duration-500
+                                    w-24 h-24 flex items-center justify-center mb-4 transform group-hover:rotate-6 transition-transform duration-500
                                     ${prize.isTotal ? 'rounded-2xl shadow-lg bg-gradient-to-br from-[#1D6E58] to-[#144d3d]' : ''}
                                 `}
                             >
@@ -304,7 +304,7 @@ export function ActivationsSection() {
 
                             <div className="my-4 relative">
                                 <motion.div
-                                    className="text-3xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#1D6E58] to-[#144d3d]"
+                                    className="text-2xl md:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#1D6E58] to-[#144d3d]"
                                     initial={{ scale: 0.8 }}
                                     whileInView={{ scale: 1 }}
                                     transition={{ type: "spring", stiffness: 200, damping: 10 }}

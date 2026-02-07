@@ -83,7 +83,7 @@ const itemVariants = {
 
 export function TeamSection() {
     return (
-        <section id="team" className="relative py-20 bg-[#F0FDF4] overflow-hidden">
+        <section id="team" className="relative py-16 bg-[#F0FDF4] overflow-hidden">
             {/* Background Decorative Elements */}
             <motion.div
                 className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#1D6E58]/5 rounded-full blur-[80px]"
@@ -94,7 +94,7 @@ export function TeamSection() {
                 transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
             />
 
-            <div className="relative z-10 max-w-6xl mx-auto px-6">
+            <div className="relative z-10 max-w-5xl mx-auto px-6">
                 <div className="text-center mb-16">
                     <motion.div
                         initial={{ opacity: 0, y: 15 }}
@@ -109,7 +109,7 @@ export function TeamSection() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: false }}
-                        className="text-4xl md:text-5xl font-black text-[#1D6E58] tracking-tight"
+                        className="text-3xl md:text-4xl font-black text-[#1D6E58] tracking-tight"
                     >
                         ĐỘI NGŨ <span className="text-[#FDD62B]">TỔ CHỨC</span>
                     </motion.h2>
@@ -155,7 +155,7 @@ export function TeamSection() {
                                     </motion.div>
                                 </motion.div>
                                 <h3 className="text-[#1D6E58]/60 font-mono text-[10px] font-bold uppercase tracking-widest mb-1">{member.role}</h3>
-                                <p className="text-xl font-black text-[#1D6E58] leading-tight">{member.name}</p>
+                                <p className="text-lg font-black text-[#1D6E58] leading-tight">{member.name}</p>
 
                                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-1 bg-[#FDD62B] rounded-t-full scale-x-0 group-hover:scale-x-100 transition-transform" />
                             </div>
@@ -178,7 +178,7 @@ export function TeamSection() {
                             whileHover={{ y: -4 }}
                             className="group h-full"
                         >
-                            <div className="relative bg-white/60 backdrop-blur-sm border border-white/40 p-5 rounded-2xl shadow-sm hover:shadow-md hover:bg-white transition-all h-full flex flex-col">
+                            <div className="relative bg-white/60 backdrop-blur-sm border border-white/40 p-4 rounded-xl shadow-sm hover:shadow-md hover:bg-white transition-all h-full flex flex-col">
                                 <div className="flex items-center gap-3 mb-2">
                                     <motion.div
                                         className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 relative overflow-hidden"

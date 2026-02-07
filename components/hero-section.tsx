@@ -60,7 +60,7 @@ export function HeroSection() {
         <section
             id="hero"
             ref={ref}
-            className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-white noise-overlay"
+            className="relative h-[95vh] flex items-center justify-center overflow-hidden bg-white noise-overlay"
         >
             {/* Subtle gradient background */}
             <div className="absolute inset-0 bg-gradient-to-br from-white via-[#AFFF00]/5 to-white" />
@@ -84,7 +84,7 @@ export function HeroSection() {
                 transition={{ duration: 10, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
             />
 
-            <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-12">
+            <div className="relative z-10 max-w-6xl mx-auto px-6 pt-12 pb-8">
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
                     {/* Text Content */}
                     <motion.div style={{ opacity }} className="space-y-5">
@@ -107,7 +107,7 @@ export function HeroSection() {
                         <div className="space-y-1 overflow-hidden">
                             <motion.h1
                                 style={{ x: textX1 }}
-                                className="text-4xl md:text-6xl font-black tracking-tighter text-[#1D6E58] leading-[0.9]"
+                                className="text-3xl md:text-5xl font-black tracking-tighter text-[#1D6E58] leading-[0.9]"
                             >
                                 <motion.span
                                     variants={fadeUpVariants}
@@ -121,7 +121,7 @@ export function HeroSection() {
                             </motion.h1>
                             <motion.h1
                                 style={{ x: textX2 }}
-                                className="text-4xl md:text-6xl font-black tracking-tighter text-[#FDD62B] leading-[0.9] mt-5"
+                                className="text-3xl md:text-5xl font-black tracking-tighter text-[#FDD62B] leading-[0.9] mt-4"
                             >
                                 <motion.span
                                     variants={fadeUpVariants}
@@ -138,7 +138,7 @@ export function HeroSection() {
                                 initial="hidden"
                                 animate="visible"
                                 custom={3}
-                                className="text-lg md:text-xl font-mono text-[#121212]/60 tracking-tight pt-2 max-w-md"
+                                className="text-base md:text-lg font-mono text-[#121212]/60 tracking-tight pt-1 max-w-md"
                             >
                                 Vượt giới hạn - Chạm đam mê
                             </motion.p>
@@ -152,7 +152,7 @@ export function HeroSection() {
                             className="flex flex-wrap gap-3 pt-2"
                         >
                             <motion.button
-                                className="bg-[#FDD62B] text-[#121212] px-6 py-3 rounded-full font-bold text-sm tracking-wide flex items-center gap-2 group relative overflow-hidden"
+                                className="bg-[#FDD62B] text-[#121212] px-4 py-2 rounded-full font-bold text-xs tracking-wide flex items-center gap-2 group relative overflow-hidden"
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
                                 transition={{ type: "spring" as const, stiffness: 400, damping: 17 }}
@@ -231,9 +231,9 @@ export function HeroSection() {
                             >
                                 <Image
                                     src="/images/imagebanner.png"
-                                    alt="FPTU 20 OPEN 26 Banner"
-                                    width={1000}
-                                    height={600}
+                                    alt="FPTU OPEN 2026 Banner"
+                                    width={800}
+                                    height={480}
                                     className="relative z-10 drop-shadow-2xl rounded-2xl object-cover"
                                     priority
                                 />

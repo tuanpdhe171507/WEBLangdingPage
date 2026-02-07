@@ -42,10 +42,10 @@ export function Navigation() {
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ type: "spring" as const, stiffness: 100, damping: 20 }}
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-[#1D6E58]/95 backdrop-blur-md border-b border-white/10" : "bg-transparent"
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-[#1D6E58]/95 backdrop-blur-md border-b border-white/10" : "bg-transparent"
                 }`}
         >
-            <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div className="max-w-6xl mx-auto px-6 py-2 flex items-center justify-between">
                 <Link href="/" className="flex items-center gap-2">
                     <motion.div
                         className="flex flex-col leading-[0.75] italic font-black uppercase tracking-tighter"
@@ -53,7 +53,7 @@ export function Navigation() {
                         transition={{ type: "spring" as const, stiffness: 400, damping: 17 }}
                     >
                         <motion.span
-                            className="text-xl md:text-2xl bg-gradient-to-b from-[#F9E43C] via-[#FFF9C4] to-[#F9E43C] bg-clip-text text-transparent drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] px-1"
+                            className="text-lg md:text-xl bg-gradient-to-b from-[#F9E43C] via-[#FFF9C4] to-[#F9E43C] bg-clip-text text-transparent drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] px-1"
                             animate={{
                                 filter: scrolled
                                     ? ["drop-shadow(0 2px 4px rgba(0,0,0,0.5)) brightness(1)", "drop-shadow(0 2px 10px rgba(249,228,60,0.5)) brightness(1.1)", "drop-shadow(0 2px 4px rgba(0,0,0,0.5)) brightness(1)"]
@@ -64,7 +64,7 @@ export function Navigation() {
                             FPTU 20
                         </motion.span>
                         <motion.span
-                            className="text-xl md:text-2xl bg-gradient-to-b from-[#F9E43C] via-[#FFF9C4] to-[#F9E43C] bg-clip-text text-transparent drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] px-1"
+                            className="text-lg md:text-xl bg-gradient-to-b from-[#F9E43C] via-[#FFF9C4] to-[#F9E43C] bg-clip-text text-transparent drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] px-1"
                             animate={{
                                 filter: scrolled
                                     ? ["drop-shadow(0 2px 4px rgba(0,0,0,0.5)) brightness(1)", "drop-shadow(0 2px 10px rgba(249,228,60,0.5)) brightness(1.1)", "drop-shadow(0 2px 4px rgba(0,0,0,0.5)) brightness(1)"]
@@ -102,7 +102,7 @@ export function Navigation() {
                 </div>
 
                 <motion.button
-                    className="hidden md:block bg-[#FDD62B] text-[#121212] px-6 py-2.5 rounded-full font-bold text-sm tracking-wide relative overflow-hidden"
+                    className="hidden md:block bg-[#FDD62B] text-[#121212] px-4 py-2 rounded-full font-bold text-xs tracking-wide relative overflow-hidden"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     transition={{ type: "spring" as const, stiffness: 400, damping: 17 }}
